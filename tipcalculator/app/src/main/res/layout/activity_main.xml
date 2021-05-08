@@ -67,7 +67,7 @@
         android:id="@+id/calculate_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/design_default_color_primary"
+        android:background="@color/green"
         android:text="@string/calculate"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
