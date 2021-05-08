@@ -19,8 +19,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.calculateButton.setOnClickListener { calculateTip() }
-        binding.costOfServicesEditText.setOnKeyListener{view,keyCode,_ -> handleKeyEvent(view, keyCode)}
+        binding.costOfServicesEditText.setOnKeyListener { view, keyCode, _ ->
+            handleKeyEvent(
+                view,
+                keyCode
+            )
+        }
     }
+
     private fun handleKeyEvent(view: View, keyCode: Int): Boolean {
         if (keyCode == KeyEvent.KEYCODE_ENTER) {
             // Hide the keyboard
