@@ -34,11 +34,11 @@ class PickupFragment : Fragment() {
     // This property is non-null between the onCreateView() and onDestroyView() lifecycle callbacks,
     // when the view hierarchy is attached to the fragment.
     private var binding: FragmentPickupBinding? = null
-    private val sharedViewModel:OrderViewModel by activityViewModels()
+    private val sharedViewModel: OrderViewModel by activityViewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         val fragmentBinding = FragmentPickupBinding.inflate(inflater, container, false)
         binding = fragmentBinding
@@ -71,7 +71,8 @@ class PickupFragment : Fragment() {
         super.onDestroyView()
         binding = null
     }
-    fun cancelOrder(){
+
+    fun cancelOrder() {
         sharedViewModel.resetOptions()
         findNavController().navigate(R.id.action_pickupFragment_to_startFragment)
     }
